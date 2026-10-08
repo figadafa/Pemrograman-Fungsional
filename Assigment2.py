@@ -81,7 +81,6 @@ def get_string_input(prompt):
         else:
             print("Input tidak boleh kosong. Mohon coba lagi.")
 def get_numeric_input(prompt, type_func=int):
-    """Mendapatkan input numerik (int atau float) dari user dengan validasi."""
     while True:
         try:
             value_str = input(prompt).strip()
@@ -99,7 +98,6 @@ def get_numeric_input(prompt, type_func=int):
                 f"(misal: {type_func.__name__ == 'int' and '123' or '12.3'})."
             )
 def get_time_input(prompt):
-    """Mendapatkan input waktu (HH:MM) dari user dengan validasi."""
     while True:
         time_str = input(prompt).strip()
         try:
@@ -276,7 +274,6 @@ def analisis_data():
 
 # 10. FUNGSI LOGOUT
 def logout():
-    """Fungsi logout user, mereset session."""
     global current_user_id
     if current_user_id:
         print(
